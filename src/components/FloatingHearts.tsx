@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-interface Heart {
+interface Particle {
   id: number;
   left: number;
   size: number;
@@ -9,40 +9,37 @@ interface Heart {
   emoji: string;
 }
 
-const EMOJIS = ["💖", "💕", "💗", "💝", "🩷", "♥️", "✨"];
+const EMOJIS = ["💖", "💕", "💗", "💝", "🩷", "♥️", "✨", "🌼", "🤍", "💫"];
 
 const FloatingHearts = () => {
-  const [hearts, setHearts] = useState<Heart[]>([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const createHearts = () => {
-      const newHearts: Heart[] = Array.from({ length: 20 }, (_, i) => ({
-        id: i,
-        left: Math.random() * 100,
-        size: 0.6 + Math.random() * 1.2,
-        duration: 8 + Math.random() * 12,
-        delay: Math.random() * 15,
-        emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
-      }));
-      setHearts(newHearts);
-    };
-    createHearts();
+    const items: Particle[] = Array.from({ length: 28 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      size: 0.6 + Math.random() * 1.4,
+      duration: 8 + Math.random() * 14,
+      delay: Math.random() * 18,
+      emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
+    }));
+    setParticles(items);
   }, []);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {hearts.map((heart) => (
+      {particles.map((p) => (
         <span
-          key={heart.id}
+          key={p.id}
           className="floating-heart"
           style={{
-            left: `${heart.left}%`,
-            fontSize: `${heart.size}rem`,
-            animationDuration: `${heart.duration}s`,
-            animationDelay: `${heart.delay}s`,
+            left: `${p.left}%`,
+            fontSize: `${p.size}rem`,
+            animationDuration: `${p.duration}s`,
+            animationDelay: `${p.delay}s`,
           }}
         >
-          {heart.emoji}
+          {p.emoji}
         </span>
       ))}
     </div>

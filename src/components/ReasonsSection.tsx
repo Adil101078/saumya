@@ -7,7 +7,7 @@ const reasons = [
   { emoji: "😂", text: "How you laugh at my terrible jokes" },
   { emoji: "🌟", text: "Your strength and grace through everything" },
   { emoji: "💖", text: "The kindness you show to everyone around you" },
-  { emoji: "🦋", text: "The butterflies I still get every time I see you" },
+  { emoji: "🌼", text: "You bloom like a daisy — beautiful and pure" },
   { emoji: "🌙", text: "How you're the last thought on my mind every night" },
 ];
 
@@ -26,7 +26,7 @@ const ReasonsSection = () => {
 
   return (
     <section className="py-20 px-4" ref={ref}>
-      <h2 className="section-heading text-center mb-14">Reasons I Love You 💗</h2>
+      <h2 className="section-heading text-center mb-14">Reasons I Love You 💗🌼</h2>
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {reasons.map((r, i) => (
           <div
