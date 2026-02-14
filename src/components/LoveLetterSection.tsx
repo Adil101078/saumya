@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const LETTER = `My Dearest Saumya,
+const LETTER = `My Darlinnnnnn,
 
 From the very first moment you walked into my life, everything changed — the world became brighter, warmer, and infinitely more beautiful.
 
@@ -31,7 +31,7 @@ const LoveLetterSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -54,11 +54,15 @@ const LoveLetterSection = () => {
   return (
     <section id="love-letter" ref={sectionRef} className="py-20 px-4">
       <div className="max-w-2xl mx-auto">
-        <h2 className="section-heading text-center mb-12">A Letter For You 💌🌼</h2>
+        <h2 className="section-heading text-center mb-12">
+          A Letter For You 💌🌼
+        </h2>
         <div className="glass-card p-8 sm:p-12 relative overflow-hidden">
           {/* Corner daisies */}
           <span className="absolute top-3 right-4 text-2xl opacity-40">🌼</span>
-          <span className="absolute bottom-3 left-4 text-2xl opacity-40">🌼</span>
+          <span className="absolute bottom-3 left-4 text-2xl opacity-40">
+            🌼
+          </span>
           <p className="text-body text-foreground/80 text-base sm:text-lg leading-relaxed whitespace-pre-line">
             {LETTER.slice(0, visibleChars)}
             {visibleChars < LETTER.length && (

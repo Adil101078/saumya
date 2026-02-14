@@ -12,13 +12,17 @@ const SurpriseSection = () => {
           onClick={() => setRevealed(true)}
           className="glow-button text-lg animate-pulse-glow"
         >
-          Click for a Surprise 💌
+          Click for a Surprise Darlinnn 💌
         </button>
       ) : (
         <div className="max-w-lg mx-auto animate-fade-in-up">
           <div className="glass-card p-10 relative overflow-hidden">
-            <span className="absolute top-2 left-3 text-3xl opacity-50">🌼</span>
-            <span className="absolute bottom-2 right-3 text-3xl opacity-50">🌼</span>
+            <span className="absolute top-2 left-3 text-3xl opacity-50">
+              🌼
+            </span>
+            <span className="absolute bottom-2 right-3 text-3xl opacity-50">
+              🌼
+            </span>
             <p className="text-script text-3xl sm:text-5xl text-primary leading-snug">
               Will you be my forever Valentine, Saumya? ❤️
             </p>
