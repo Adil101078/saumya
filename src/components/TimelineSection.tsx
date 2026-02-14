@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 const milestones = [
   { title: "The Day We Met", emoji: "✨", description: "A moment that changed everything. Fate brought us together." },
   { title: "Our First Conversation", emoji: "💬", description: "Words turned into hours. We couldn't stop talking." },
-  { title: "Our First Date", emoji: "🌹", description: "Butterflies, nervous smiles, and a perfect evening." },
+  { title: "Our First Date", emoji: "🌼", description: "Butterflies, nervous smiles, and a perfect evening." },
   { title: "Our Favorite Memory", emoji: "💫", description: "That one moment we'll never forget — pure magic." },
-  { title: "Forever Begins", emoji: "💍", description: "Every day with you is a new beautiful beginning." },
+  { title: "Forever Begins", emoji: "💍", description: "Every day with you is a new beautiful beginning. 🌼" },
 ];
 
 const TimelineSection = () => {
@@ -34,9 +34,8 @@ const TimelineSection = () => {
 
   return (
     <section className="py-20 px-4">
-      <h2 className="section-heading text-center mb-16">Our Journey Together 💕</h2>
+      <h2 className="section-heading text-center mb-16">Our Journey Together 💕🌼</h2>
       <div className="max-w-4xl mx-auto relative">
-        {/* Vertical line */}
         <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block" />
 
         <div className="space-y-12">
